@@ -25,4 +25,6 @@ api.use('/login', routerLogin)
 api.use('/fraisforfait', routerFrais)
 api.use('/pictures', routerFiles)
 
+const PORT = process.env.PORT || 3001;
+
 api.listen(3001)

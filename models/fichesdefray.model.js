@@ -21,7 +21,7 @@ const searchLigneFraisForfait = (id,mois,callback) => {
     connection.query('SELECT quantite FROM lignefraisforfait WHERE idutilisateur = (?) AND mois=(?)',[id, mois], callback)
 }
 const searchLigneFraisHorsForfait = (id,mois,callback) => {
-    connection.query('SELECT libelle, date, montant FROM lignefraishorsforfait WHERE idutilisateur = (?) AND mois=(?)', [id,mois], callback)
+    connection.query('SELECT id, libelle, date, montant FROM lignefraishorsforfait WHERE idutilisateur = (?) AND mois=(?)', [id,mois], callback)
 }
 
 // Fonction Fiche Frais 
