@@ -1,8 +1,7 @@
 const connection = require('../config/db')
 
-const searchAll = (login,callback) => {
-    
-    
+const auth = (login,callback) => {
+
     connection.query('SELECT * FROM utilisateur WHERE login=(?)',login, callback)
     
 }
@@ -31,7 +30,7 @@ const deleteUser = (id,callback) => {
 }
 
 module.exports = {
-    searchAll,
+    auth,
     addUser,
     updateUser,
     deleteUser
